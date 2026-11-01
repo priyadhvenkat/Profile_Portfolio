@@ -16,14 +16,17 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <!-- STEP 1: Headline (done) -->
+    <!-- HOME -->
     <section id="home">
         <div class="container">
             <h2>Data Scientist &amp; Data Engineer</h2>
@@ -32,7 +35,7 @@
         </div>
     </section>
 
-    <!-- STEP 1: About (done) -->
+    <!-- ABOUT -->
     <section id="about">
         <div class="container">
             <h2>About Me</h2>
@@ -42,31 +45,147 @@
         </div>
     </section>
 
-    <!-- STEP 4: Projects (to do) -->
-    <section id="projects">
+    <!-- SKILLS -->
+    <section id="skills">
         <div class="container">
-            <h2>Projects</h2>
+            <h2>Skills</h2>
             <div class="project">
-                <h3>Project 1</h3>
-                <p>Description of project 1.</p>
+                <h3>Languages</h3>
+                <p>Python, SQL, R, Oracle PL/SQL</p>
             </div>
             <div class="project">
-                <h3>Project 2</h3>
-                <p>Description of project 2.</p>
+                <h3>Data Engineering</h3>
+                <p>Azure Data Factory, Azure SQL, Azure Data Warehouse, Microsoft Fabric (self-taught, hands-on), Databricks, Snowflake, incremental-load pipelines, data quality checks</p>
+            </div>
+            <div class="project">
+                <h3>Databases</h3>
+                <p>Oracle, PostgreSQL (schema design, performance tuning)</p>
+            </div>
+            <div class="project">
+                <h3>Machine Learning &amp; Deep Learning</h3>
+                <p>PyTorch, Keras, scikit-learn, Prophet &middot; regression, classification, clustering, time series forecasting, anomaly detection, temporal convolutional networks (TCN), MLflow</p>
+            </div>
+            <div class="project">
+                <h3>Data Analysis &amp; Visualization</h3>
+                <p>pandas, NumPy, matplotlib, seaborn, Power BI (DAX, Power Query), Tableau</p>
+            </div>
+            <div class="project">
+                <h3>Tools</h3>
+                <p>Git/GitHub, Jupyter, Streamlit, UNIX, TOAD</p>
             </div>
         </div>
     </section>
 
-    <!-- STEP 6: Contact (to do) -->
+    <!-- EXPERIENCE -->
+    <section id="experience">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="project">
+                <h3>Tata Consultancy Services, Chennai, India</h3>
+                <p><em>Client: NielsenIQ</em></p>
+
+                <h4>Data Analyst &ndash; Technical Lead | 2017 &ndash; 2019</h4>
+                <ul>
+                    <li>Built incremental-load pipelines in Azure Data Factory to move NielsenIQ retail data into an Azure enterprise data warehouse</li>
+                    <li>Designed and ran data quality checks to catch missing, duplicate, and inconsistent records before reporting</li>
+                    <li>Built Power BI reports for business users</li>
+                    <li>Led technical work for the team and reviewed deliverables</li>
+                </ul>
+
+                <h4>Developer | 2013 &ndash; 2017</h4>
+                <ul>
+                    <li>Developed and enhanced Oracle PL/SQL packages based on client requirements for NielsenIQ's Total Order Processing System (TOPS), built on Oracle E-Business Suite</li>
+                    <li>Designed PostgreSQL schemas and tuned query performance</li>
+                    <li>Monitored and restarted failed concurrent programs using logs, and resolved application and database tickets escalated from the L1 support team</li>
+                    <li>Worked with UNIX, SQL, and TOAD across inventory, workflow, reports, and forms modules</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+
+            <div class="project">
+                <h3>Server Telemetry Anomaly Detection with TCN Autoencoder</h3>
+                <p><em>UCF Capstone &middot; Team project with an industry partner</em></p>
+                <p>Built a deep learning model that learns the normal behavior of servers from telemetry time series and flags unusual workloads using reconstruction error. Simple statistical methods couldn't separate the workloads well, so the team moved to a Temporal Convolutional Network Autoencoder (TCN-AE).</p>
+                <ul>
+                    <li><strong>My role:</strong> data preparation (finding gaps and timestamp issues, normalization) and IQR-based anomaly detection; worked with the team on model building, validation, MLflow tracking, the GitHub repo, and the Streamlit app</li>
+                    <li><strong>Result:</strong> reconstruction loss stayed around 0.25% on normal data but jumped to 3.77% on the CPU stress test, about 15&times; higher. PCA, t-SNE, and KL divergence confirmed the same ranking.</li>
+                </ul>
+                <p><strong>Tools:</strong> Python, PyTorch, pandas, NumPy, MLflow, Streamlit</p>
+            </div>
+
+            <div class="project">
+                <h3>End-to-End Azure Data Pipeline</h3>
+                <p><em>In progress</em></p>
+                <p>Building a cloud data pipeline that ingests raw data, cleans it with Python and SQL, and loads it into an Azure SQL star-schema warehouse with incremental loading and secure access, feeding Power BI reports. Now moving the pipeline to Microsoft Fabric.</p>
+                <p><strong>Tools:</strong> Azure Data Factory, Azure SQL, Microsoft Fabric, Python, SQL, Power BI</p>
+            </div>
+
+            <div class="project">
+                <h3>Supply Chain Inventory Loss Prediction</h3>
+                <p>Used 2018&ndash;2023 inventory audit data from a medical device company to predict and reduce write-off losses from sales reps' inventory.</p>
+                <ul>
+                    <li>Cleaned messy labels (for example, about 15 spellings of one audit type), handled nulls, and standardized risk ratings</li>
+                    <li>Compared 9 regression models, with Random Forest performing best; built classification models for risk rating and grouped reps into Best, Better, and Poor performers</li>
+                    <li>Forecast future write-offs with Prophet, which showed a rising trend with a year-end peak</li>
+                    <li><strong>Recommendations:</strong> targeted training before peak season, tighter audits, and mentoring by top reps</li>
+                </ul>
+                <p><strong>Tools:</strong> Python, scikit-learn, Keras, Prophet, pandas</p>
+            </div>
+
+            <div class="project">
+                <h3>Los Angeles Crime Analysis Dashboard</h3>
+                <p>Built an interactive Power BI dashboard on 2.1 million+ LA crime records (2010&ndash;2019) to show when, where, and what types of crime happen, and who is affected.</p>
+                <ul>
+                    <li>Cleaned the data with Python and Power Query, and wrote DAX measures for KPIs like crime rate per 100,000 people</li>
+                    <li>Found that crime peaks in summer, evenings, and weekends, and that 77th Street and Southwest are the highest-crime areas</li>
+                    <li>Recommended focused evening and weekend patrols in those areas, plus better parking lot safety at night</li>
+                </ul>
+                <p><strong>Tools:</strong> Power BI, DAX, Power Query, Python</p>
+            </div>
+
+            <div class="project">
+                <h3>Customer and Listing Segmentation (Clustering)</h3>
+                <p>Two clustering projects comparing unsupervised learning methods:</p>
+                <ul>
+                    <li><strong>Retail customers:</strong> about 540,000 online transactions from 4,372 customers. Compared K-Means, Hierarchical, K-Medoids, DBSCAN, and Mean Shift, with PCA, to find high- and low-spending groups for loyalty and promotion strategies</li>
+                    <li><strong>Airbnb listings</strong> (two-person project): clustered listings and used Random Forest feature importance to find what drives price (accommodates, bathrooms), and suggested revenue ideas for hosts</li>
+                </ul>
+                <p><strong>Tools:</strong> Python, scikit-learn, PCA, pandas</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications">
+        <div class="container">
+            <h2>Certifications</h2>
+            <div class="project">
+                <h3>DataCamp Data Scientist Associate</h3>
+                <p>In progress</p>
+            </div>
+            <div class="project">
+                <h3>Microsoft Certified: Power BI Data Analyst Associate (PL-300)</h3>
+                <p>In progress</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
     <section id="contact">
         <div class="container">
             <h2>Contact</h2>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
+            <p>I'm open to Data Scientist and Data Engineer roles. Feel free to reach out!</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:priya1@gmail.com">priya1@gmail.com</a></li>
+                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/priyadharshini-panneerselvam-b5747b75" target="_blank" rel="noopener">linkedin.com/in/priyadharshini-panneerselvam-b5747b75</a></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/priyadhvenkat" target="_blank" rel="noopener">github.com/priyadhvenkat</a></li>
+            </ul>
         </div>
     </section>
 
