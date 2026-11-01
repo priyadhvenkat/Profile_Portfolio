@@ -5,195 +5,305 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Priyadharshini Panneerselvam | Data Scientist & Data Engineer</title>
     <meta name="description" content="Data Scientist & Data Engineer turning raw data into reliable pipelines, models, and dashboards.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="container">
-                <h1 class="logo">Priyadharshini Panneerselvam</h1>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#certifications">Certifications</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+
+    <!-- HERO -->
+    <header class="hero">
+        <svg class="deco deco-top" viewBox="0 0 400 300" aria-hidden="true">
+            <path d="M400 20 C300 40 260 120 180 140 S40 200 0 300" />
+            <path d="M400 45 C305 65 270 140 190 160 S55 220 20 300" />
+            <path d="M400 70 C310 90 280 160 200 180 S70 240 40 300" />
+            <path d="M400 95 C315 115 290 180 210 200 S85 260 60 300" />
+        </svg>
+        <svg class="deco deco-bottom" viewBox="0 0 400 200" aria-hidden="true">
+            <path d="M0 40 C120 20 200 120 400 90" />
+            <path d="M0 65 C120 45 200 145 400 115" />
+            <path d="M0 90 C120 70 200 170 400 140" />
+        </svg>
+
+        <div class="container topbar">
+            <span class="brand"><span class="brand-mark">&lt;/&gt;</span> Priya</span>
+            <a class="top-cta" href="#contact" data-open="contact">Let's talk</a>
+        </div>
+
+        <div class="container hero-grid">
+            <div class="hero-left">
+                <span class="line-bar"></span>
+                <p class="kicker">Hello, I'm Priya</p>
+                <h1>Data Scientist <span class="amp">&amp;</span> Data Engineer</h1>
+                <p class="hero-name">Priyadharshini Panneerselvam</p>
+                <p class="tagline">Turning raw data into reliable pipelines, models, and dashboards.</p>
+                <div class="hero-links">
+                    <a class="btn btn-primary" href="#projects" data-open="projects">View projects</a>
+                    <a class="btn btn-ghost" href="https://www.linkedin.com/in/priyadharshini-panneerselvam-b5747b75" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
             </div>
-        </nav>
+
+            <div class="hero-photo">
+                <img src="profile.jpg" alt="Photo of Priyadharshini Panneerselvam" class="photo"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="photo-fallback" aria-hidden="true">PP</div>
+            </div>
+
+            <aside class="hero-side">
+                <div class="side-block">
+                    <h3>About me</h3>
+                    <p>5+ years on NielsenIQ retail data at TCS, plus an MS in Data Analytics from UCF.</p>
+                    <a href="#about" data-open="about">Learn more &rarr;</a>
+                </div>
+                <div class="side-block">
+                    <h3>My work</h3>
+                    <p>Deep learning on time series, Azure data pipelines, and Power BI dashboards.</p>
+                    <a href="#projects" data-open="projects">Browse projects &rarr;</a>
+                </div>
+                <div class="side-block">
+                    <h3>Find me</h3>
+                    <div class="socials">
+                        <a href="https://www.linkedin.com/in/priyadharshini-panneerselvam-b5747b75" target="_blank" rel="noopener">LinkedIn</a>
+                        <a href="https://github.com/priyadhvenkat" target="_blank" rel="noopener">GitHub</a>
+                        <a href="mailto:priyabce72@gmail.com">Email</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <div class="container stats">
+            <div class="stat"><span class="stat-num">5+</span><span class="stat-label">Years in enterprise data</span></div>
+            <div class="stat"><span class="stat-num">2.1M+</span><span class="stat-label">Records analyzed in Power BI</span></div>
+            <div class="stat"><span class="stat-num">5</span><span class="stat-label">Data &amp; ML projects</span></div>
+            <div class="stat"><span class="stat-num">MS</span><span class="stat-label">Data Analytics, UCF</span></div>
+        </div>
     </header>
 
-    <!-- HOME -->
-    <section id="home">
+    <!-- TABS -->
+    <nav class="tabs-bar" aria-label="Sections">
         <div class="container">
-            <h2>Data Scientist &amp; Data Engineer</h2>
-            <p><strong>Turning raw data into reliable pipelines, models, and dashboards.</strong></p>
-            <p>MS in Data Analytics (University of Central Florida) &middot; 5+ years building data pipelines and analytics for NielsenIQ retail data at Tata Consultancy Services</p>
+            <div class="tabs" role="tablist">
+                <button class="tab active" role="tab" aria-selected="true" aria-controls="about" id="tab-about" data-tab="about">About</button>
+                <button class="tab" role="tab" aria-selected="false" aria-controls="skills" id="tab-skills" data-tab="skills">Skills</button>
+                <button class="tab" role="tab" aria-selected="false" aria-controls="experience" id="tab-experience" data-tab="experience">Experience</button>
+                <button class="tab" role="tab" aria-selected="false" aria-controls="projects" id="tab-projects" data-tab="projects">Projects</button>
+                <button class="tab" role="tab" aria-selected="false" aria-controls="certifications" id="tab-certifications" data-tab="certifications">Certifications</button>
+                <button class="tab" role="tab" aria-selected="false" aria-controls="contact" id="tab-contact" data-tab="contact">Contact</button>
+            </div>
         </div>
-    </section>
+    </nav>
 
-    <!-- ABOUT -->
-    <section id="about">
-        <div class="container">
+    <main class="container">
+
+        <!-- ABOUT -->
+        <section id="about" class="panel active" role="tabpanel" aria-labelledby="tab-about">
             <h2>About Me</h2>
-            <p>I'm a data scientist and data engineer based in Florida, with an MS in Data Analytics from the University of Central Florida. I spent over five years at Tata Consultancy Services on NielsenIQ's retail data systems, first as a database developer writing Oracle PL/SQL and tuning PostgreSQL, then as a technical lead building Azure data warehouse pipelines, data quality checks, and Power BI reports.</p>
-            <p>At UCF, I focused on machine learning and deep learning, including a team capstone that used a temporal convolutional autoencoder (TCN-AE) to detect anomalies in telemetry data. I like work that connects reliable data engineering with useful models and clear dashboards.</p>
-            <p>Outside of work, I enjoy portrait drawing and painting.</p>
-        </div>
-    </section>
+            <div class="about-grid">
+                <div class="card prose">
+                    <p>I'm a data scientist and data engineer based in Florida, with an MS in Data Analytics from the University of Central Florida. I spent over five years at Tata Consultancy Services on NielsenIQ's retail data systems, first as a database developer writing Oracle PL/SQL and tuning PostgreSQL, then as a technical lead building Azure data warehouse pipelines, data quality checks, and Power BI reports.</p>
+                    <p>At UCF, I focused on machine learning and deep learning, including a team capstone that used a temporal convolutional autoencoder (TCN-AE) to detect anomalies in telemetry data. I like work that connects reliable data engineering with useful models and clear dashboards.</p>
+                    <p>Outside of work, I enjoy portrait drawing and painting.</p>
+                </div>
+                <div class="card highlights">
+                    <h3>What I bring</h3>
+                    <ul class="check-list">
+                        <li>End-to-end pipelines: ingest, clean, model, report</li>
+                        <li>Machine learning and deep learning for real business problems</li>
+                        <li>Strong SQL and database tuning foundation</li>
+                        <li>Clear dashboards that people actually use</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <!-- SKILLS -->
-    <section id="skills">
-        <div class="container">
+        <!-- SKILLS -->
+        <section id="skills" class="panel" role="tabpanel" aria-labelledby="tab-skills" hidden>
             <h2>Skills</h2>
-            <div class="project">
-                <h3>Languages</h3>
-                <p>Python, SQL, R, Oracle PL/SQL</p>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Languages</h3>
+                    <div class="chips"><span>Python</span><span>SQL</span><span>R</span><span>Oracle PL/SQL</span></div>
+                </div>
+                <div class="card">
+                    <h3>Data Engineering</h3>
+                    <div class="chips"><span>Azure Data Factory</span><span>Azure SQL</span><span>Azure Data Warehouse</span><span>Microsoft Fabric (self-taught, hands-on)</span><span>Databricks</span><span>Snowflake</span><span>Incremental loads</span><span>Data quality checks</span></div>
+                </div>
+                <div class="card">
+                    <h3>Machine Learning &amp; Deep Learning</h3>
+                    <div class="chips"><span>PyTorch</span><span>Keras</span><span>scikit-learn</span><span>Prophet</span><span>MLflow</span><span>Regression</span><span>Classification</span><span>Clustering</span><span>Time series</span><span>Anomaly detection</span><span>TCN</span></div>
+                </div>
+                <div class="card">
+                    <h3>Analysis &amp; Visualization</h3>
+                    <div class="chips"><span>pandas</span><span>NumPy</span><span>matplotlib</span><span>seaborn</span><span>Power BI</span><span>DAX</span><span>Power Query</span><span>Tableau</span></div>
+                </div>
+                <div class="card">
+                    <h3>Databases</h3>
+                    <div class="chips"><span>Oracle</span><span>PostgreSQL</span><span>Schema design</span><span>Performance tuning</span></div>
+                </div>
+                <div class="card">
+                    <h3>Tools</h3>
+                    <div class="chips"><span>Git / GitHub</span><span>Jupyter</span><span>Streamlit</span><span>UNIX</span><span>TOAD</span></div>
+                </div>
             </div>
-            <div class="project">
-                <h3>Data Engineering</h3>
-                <p>Azure Data Factory, Azure SQL, Azure Data Warehouse, Microsoft Fabric (self-taught, hands-on), Databricks, Snowflake, incremental-load pipelines, data quality checks</p>
-            </div>
-            <div class="project">
-                <h3>Databases</h3>
-                <p>Oracle, PostgreSQL (schema design, performance tuning)</p>
-            </div>
-            <div class="project">
-                <h3>Machine Learning &amp; Deep Learning</h3>
-                <p>PyTorch, Keras, scikit-learn, Prophet &middot; regression, classification, clustering, time series forecasting, anomaly detection, temporal convolutional networks (TCN), MLflow</p>
-            </div>
-            <div class="project">
-                <h3>Data Analysis &amp; Visualization</h3>
-                <p>pandas, NumPy, matplotlib, seaborn, Power BI (DAX, Power Query), Tableau</p>
-            </div>
-            <div class="project">
-                <h3>Tools</h3>
-                <p>Git/GitHub, Jupyter, Streamlit, UNIX, TOAD</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience">
-        <div class="container">
+        <!-- EXPERIENCE -->
+        <section id="experience" class="panel" role="tabpanel" aria-labelledby="tab-experience" hidden>
             <h2>Experience</h2>
-            <div class="project">
-                <h3>Tata Consultancy Services, Chennai, India</h3>
-                <p><em>Client: NielsenIQ</em></p>
-
-                <h4>Data Analyst &ndash; Technical Lead | 2017 &ndash; 2019</h4>
-                <ul>
-                    <li>Built incremental-load pipelines in Azure Data Factory to move NielsenIQ retail data into an Azure enterprise data warehouse</li>
-                    <li>Designed and ran data quality checks to catch missing, duplicate, and inconsistent records before reporting</li>
-                    <li>Built Power BI reports for business users</li>
-                    <li>Led technical work for the team and reviewed deliverables</li>
-                </ul>
-
-                <h4>Developer | 2013 &ndash; 2017</h4>
-                <ul>
-                    <li>Developed and enhanced Oracle PL/SQL packages based on client requirements for NielsenIQ's Total Order Processing System (TOPS), built on Oracle E-Business Suite</li>
-                    <li>Designed PostgreSQL schemas and tuned query performance</li>
-                    <li>Monitored and restarted failed concurrent programs using logs, and resolved application and database tickets escalated from the L1 support team</li>
-                    <li>Worked with UNIX, SQL, and TOAD across inventory, workflow, reports, and forms modules</li>
-                </ul>
+            <div class="card">
+                <div class="company">
+                    <h3>Tata Consultancy Services</h3>
+                    <p class="muted">Chennai, India &middot; Client: NielsenIQ</p>
+                </div>
+                <div class="timeline">
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-body">
+                            <h4>Data Analyst &ndash; Technical Lead</h4>
+                            <p class="date">2017 &ndash; 2019</p>
+                            <ul>
+                                <li>Built incremental-load pipelines in Azure Data Factory to move NielsenIQ retail data into an Azure enterprise data warehouse</li>
+                                <li>Designed and ran data quality checks to catch missing, duplicate, and inconsistent records before reporting</li>
+                                <li>Built Power BI reports for business users</li>
+                                <li>Led technical work for the team and reviewed deliverables</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-body">
+                            <h4>Developer</h4>
+                            <p class="date">2013 &ndash; 2017</p>
+                            <ul>
+                                <li>Developed and enhanced Oracle PL/SQL packages based on client requirements for NielsenIQ's Total Order Processing System (TOPS), built on Oracle E-Business Suite</li>
+                                <li>Designed PostgreSQL schemas and tuned query performance</li>
+                                <li>Monitored and restarted failed concurrent programs using logs, and resolved application and database tickets escalated from the L1 support team</li>
+                                <li>Worked with UNIX, SQL, and TOAD across inventory, workflow, reports, and forms modules</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+            <div class="card edu">
+                <h3>Education</h3>
+                <p><strong>MS in Data Analytics</strong> &middot; University of Central Florida &middot; 2025</p>
+                <p><strong>Bachelor of Civil Engineering</strong> &middot; SASTRA University, India &middot; 2013</p>
+            </div>
+        </section>
 
-    <!-- PROJECTS -->
-    <section id="projects">
-        <div class="container">
+        <!-- PROJECTS -->
+        <section id="projects" class="panel" role="tabpanel" aria-labelledby="tab-projects" hidden>
             <h2>Projects</h2>
+            <div class="grid-2">
 
-            <div class="project">
-                <h3>Server Telemetry Anomaly Detection with TCN Autoencoder</h3>
-                <p><em>UCF Capstone &middot; Team project with an industry partner</em></p>
-                <p>Built a deep learning model that learns the normal behavior of servers from telemetry time series and flags unusual workloads using reconstruction error. Simple statistical methods couldn't separate the workloads well, so the team moved to a Temporal Convolutional Network Autoencoder (TCN-AE).</p>
-                <ul>
-                    <li><strong>My role:</strong> data preparation (finding gaps and timestamp issues, normalization) and IQR-based anomaly detection; worked with the team on model building, validation, MLflow tracking, the GitHub repo, and the Streamlit app</li>
-                    <li><strong>Result:</strong> reconstruction loss stayed around 0.25% on normal data but jumped to 3.77% on the CPU stress test, about 15&times; higher. PCA, t-SNE, and KL divergence confirmed the same ranking.</li>
-                </ul>
-                <p><strong>Tools:</strong> Python, PyTorch, pandas, NumPy, MLflow, Streamlit</p>
+                <article class="card project">
+                    <p class="label">UCF Capstone &middot; Team project with an industry partner</p>
+                    <h3>Server Telemetry Anomaly Detection with TCN Autoencoder</h3>
+                    <p>Built a deep learning model that learns the normal behavior of servers from telemetry time series and flags unusual workloads using reconstruction error. Simple statistical methods couldn't separate the workloads well, so the team moved to a Temporal Convolutional Network Autoencoder (TCN-AE).</p>
+                    <ul>
+                        <li><strong>My role:</strong> data preparation (finding gaps and timestamp issues, normalization) and IQR-based anomaly detection; worked with the team on model building, validation, MLflow tracking, the GitHub repo, and the Streamlit app</li>
+                        <li><strong>Result:</strong> reconstruction loss stayed around 0.25% on normal data but jumped to 3.77% on the CPU stress test, about 15&times; higher. PCA, t-SNE, and KL divergence confirmed the same ranking.</li>
+                    </ul>
+                    <div class="chips small"><span>Python</span><span>PyTorch</span><span>pandas</span><span>NumPy</span><span>MLflow</span><span>Streamlit</span></div>
+                </article>
+
+                <article class="card project">
+                    <p class="label">In progress</p>
+                    <h3>End-to-End Azure Data Pipeline</h3>
+                    <p>Building a cloud data pipeline that ingests raw data, cleans it with Python and SQL, and loads it into an Azure SQL star-schema warehouse with incremental loading and secure access, feeding Power BI reports. Now moving the pipeline to Microsoft Fabric.</p>
+                    <div class="flow" aria-label="Pipeline flow">
+                        <span>Source</span><span class="arrow">&rarr;</span><span>ADF</span><span class="arrow">&rarr;</span><span>Python / SQL</span><span class="arrow">&rarr;</span><span>Azure SQL</span><span class="arrow">&rarr;</span><span>Power BI</span>
+                    </div>
+                    <div class="chips small"><span>Azure Data Factory</span><span>Azure SQL</span><span>Microsoft Fabric</span><span>Python</span><span>SQL</span><span>Power BI</span></div>
+                </article>
+
+                <article class="card project">
+                    <p class="label">Machine learning &middot; Forecasting</p>
+                    <h3>Supply Chain Inventory Loss Prediction</h3>
+                    <p>Used 2018&ndash;2023 inventory audit data from a medical device company to predict and reduce write-off losses from sales reps' inventory.</p>
+                    <ul>
+                        <li>Cleaned messy labels (for example, about 15 spellings of one audit type), handled nulls, and standardized risk ratings</li>
+                        <li>Compared 9 regression models, with Random Forest performing best; built classification models for risk rating and grouped reps into Best, Better, and Poor performers</li>
+                        <li>Forecast future write-offs with Prophet, which showed a rising trend with a year-end peak</li>
+                        <li><strong>Recommendations:</strong> targeted training before peak season, tighter audits, and mentoring by top reps</li>
+                    </ul>
+                    <div class="chips small"><span>Python</span><span>scikit-learn</span><span>Keras</span><span>Prophet</span><span>pandas</span></div>
+                </article>
+
+                <article class="card project">
+                    <p class="label">Data visualization</p>
+                    <h3>Los Angeles Crime Analysis Dashboard</h3>
+                    <p>Built an interactive Power BI dashboard on 2.1 million+ LA crime records (2010&ndash;2019) to show when, where, and what types of crime happen, and who is affected.</p>
+                    <ul>
+                        <li>Cleaned the data with Python and Power Query, and wrote DAX measures for KPIs like crime rate per 100,000 people</li>
+                        <li>Found that crime peaks in summer, evenings, and weekends, and that 77th Street and Southwest are the highest-crime areas</li>
+                        <li>Recommended focused evening and weekend patrols in those areas, plus better parking lot safety at night</li>
+                    </ul>
+                    <div class="chips small"><span>Power BI</span><span>DAX</span><span>Power Query</span><span>Python</span></div>
+                </article>
+
+                <article class="card project">
+                    <p class="label">Unsupervised learning</p>
+                    <h3>Customer and Listing Segmentation (Clustering)</h3>
+                    <p>Two clustering projects comparing unsupervised learning methods:</p>
+                    <ul>
+                        <li><strong>Retail customers:</strong> about 540,000 online transactions from 4,372 customers. Compared K-Means, Hierarchical, K-Medoids, DBSCAN, and Mean Shift, with PCA, to find high- and low-spending groups for loyalty and promotion strategies</li>
+                        <li><strong>Airbnb listings</strong> (two-person project): clustered listings and used Random Forest feature importance to find what drives price (accommodates, bathrooms), and suggested revenue ideas for hosts</li>
+                    </ul>
+                    <div class="chips small"><span>Python</span><span>scikit-learn</span><span>PCA</span><span>pandas</span></div>
+                </article>
+
             </div>
+        </section>
 
-            <div class="project">
-                <h3>End-to-End Azure Data Pipeline</h3>
-                <p><em>In progress</em></p>
-                <p>Building a cloud data pipeline that ingests raw data, cleans it with Python and SQL, and loads it into an Azure SQL star-schema warehouse with incremental loading and secure access, feeding Power BI reports. Now moving the pipeline to Microsoft Fabric.</p>
-                <p><strong>Tools:</strong> Azure Data Factory, Azure SQL, Microsoft Fabric, Python, SQL, Power BI</p>
-            </div>
-
-            <div class="project">
-                <h3>Supply Chain Inventory Loss Prediction</h3>
-                <p>Used 2018&ndash;2023 inventory audit data from a medical device company to predict and reduce write-off losses from sales reps' inventory.</p>
-                <ul>
-                    <li>Cleaned messy labels (for example, about 15 spellings of one audit type), handled nulls, and standardized risk ratings</li>
-                    <li>Compared 9 regression models, with Random Forest performing best; built classification models for risk rating and grouped reps into Best, Better, and Poor performers</li>
-                    <li>Forecast future write-offs with Prophet, which showed a rising trend with a year-end peak</li>
-                    <li><strong>Recommendations:</strong> targeted training before peak season, tighter audits, and mentoring by top reps</li>
-                </ul>
-                <p><strong>Tools:</strong> Python, scikit-learn, Keras, Prophet, pandas</p>
-            </div>
-
-            <div class="project">
-                <h3>Los Angeles Crime Analysis Dashboard</h3>
-                <p>Built an interactive Power BI dashboard on 2.1 million+ LA crime records (2010&ndash;2019) to show when, where, and what types of crime happen, and who is affected.</p>
-                <ul>
-                    <li>Cleaned the data with Python and Power Query, and wrote DAX measures for KPIs like crime rate per 100,000 people</li>
-                    <li>Found that crime peaks in summer, evenings, and weekends, and that 77th Street and Southwest are the highest-crime areas</li>
-                    <li>Recommended focused evening and weekend patrols in those areas, plus better parking lot safety at night</li>
-                </ul>
-                <p><strong>Tools:</strong> Power BI, DAX, Power Query, Python</p>
-            </div>
-
-            <div class="project">
-                <h3>Customer and Listing Segmentation (Clustering)</h3>
-                <p>Two clustering projects comparing unsupervised learning methods:</p>
-                <ul>
-                    <li><strong>Retail customers:</strong> about 540,000 online transactions from 4,372 customers. Compared K-Means, Hierarchical, K-Medoids, DBSCAN, and Mean Shift, with PCA, to find high- and low-spending groups for loyalty and promotion strategies</li>
-                    <li><strong>Airbnb listings</strong> (two-person project): clustered listings and used Random Forest feature importance to find what drives price (accommodates, bathrooms), and suggested revenue ideas for hosts</li>
-                </ul>
-                <p><strong>Tools:</strong> Python, scikit-learn, PCA, pandas</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CERTIFICATIONS -->
-    <section id="certifications">
-        <div class="container">
+        <!-- CERTIFICATIONS -->
+        <section id="certifications" class="panel" role="tabpanel" aria-labelledby="tab-certifications" hidden>
             <h2>Certifications</h2>
-            <div class="project">
-                <h3>DataCamp Data Scientist Associate</h3>
-                <p>In progress</p>
+            <div class="grid-2">
+                <div class="card cert">
+                    <span class="badge">In progress</span>
+                    <h3>DataCamp Data Scientist Associate</h3>
+                    <p class="muted">DataCamp</p>
+                </div>
+                <div class="card cert">
+                    <span class="badge">In progress</span>
+                    <h3>Power BI Data Analyst Associate (PL-300)</h3>
+                    <p class="muted">Microsoft</p>
+                </div>
             </div>
-            <div class="project">
-                <h3>Microsoft Certified: Power BI Data Analyst Associate (PL-300)</h3>
-                <p>In progress</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CONTACT -->
-    <section id="contact">
-        <div class="container">
+        <!-- CONTACT -->
+        <section id="contact" class="panel" role="tabpanel" aria-labelledby="tab-contact" hidden>
             <h2>Contact</h2>
-            <p>I'm open to Data Scientist and Data Engineer roles. Feel free to reach out!</p>
-            <ul>
-                <li><strong>Email:</strong> <a href="mailto:priya1@gmail.com">priya1@gmail.com</a></li>
-                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/priyadharshini-panneerselvam-b5747b75" target="_blank" rel="noopener">linkedin.com/in/priyadharshini-panneerselvam-b5747b75</a></li>
-                <li><strong>GitHub:</strong> <a href="https://github.com/priyadhvenkat" target="_blank" rel="noopener">github.com/priyadhvenkat</a></li>
-            </ul>
-        </div>
-    </section>
+            <div class="card contact-card">
+                <p>I'm open to <strong>Data Scientist</strong> and <strong>Data Engineer</strong> roles. Feel free to reach out!</p>
+                <div class="contact-links">
+                    <a href="mailto:priya1@gmail.com" class="contact-item">
+                        <span class="contact-label">Email</span>
+                        <span>priya1@gmail.com</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/priyadharshini-panneerselvam-b5747b75" target="_blank" rel="noopener" class="contact-item">
+                        <span class="contact-label">LinkedIn</span>
+                        <span>priyadharshini-panneerselvam</span>
+                    </a>
+                    <a href="https://github.com/priyadhvenkat" target="_blank" rel="noopener" class="contact-item">
+                        <span class="contact-label">GitHub</span>
+                        <span>priyadhvenkat</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <footer>
         <div class="container">
             <p>&copy; 2026 Priyadharshini Panneerselvam</p>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
